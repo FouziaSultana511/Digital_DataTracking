@@ -1,0 +1,45 @@
+Steps to capture Registration/SignIn Funnel and Successful Registration user instances:
+Applying best practice, the below 16-20 instances are captured in single variable Prop60 and aggregated data view in evar60
+
+Step1) 
+Prop60 - Visitor | Login Button/Screen (Step 1)
+eVar60 - Visitor Login
+event_n1 --> Capture Successful Login
+
+Step2T) Traditional Registration Funnel Steps
+Prop60 - 
+Visitor Registration | Traditional | Register Now Page(step 2T)
+Visitor Registration | Traditional | Create account Page (step 3T)
+Visitor Registration | Traditional | Thank you page (step 4T)
+eVar60 - Visitor Registration via Traditional
+and capture the final step step4T into event_n2
+
+Step2TS) Traditional Sign UP success  process:
+Prop60 - Visitor Login | Traditional | Sign Up 
+eVar60 - Visitor Login | Traditional
+
+Prop60 - Visitor Login | Traditional | Success 
+eVar60 - Visitor Login | Traditional
+event_n3 --> Capture post successful Traditional Sign Up
+
+Step3SS) Social Media Sign Up process:
+Prop60 - Visitor Login | Facebook | Sign Up
+eVar60 - Visitor Login | Social Media
+
+Prop60 - Visitor Login | Facebook | Success
+eVar60 - Visitor Login | Social Media
+event_n4 --> Capture post successful Facebook Sign Up
+
+Prop60 - Visitor Login | LinkedIn | Sign Up
+eVar60 - Visitor Login | Social Media
+
+Prop60 - Visitor Login | LinkedIn | Success
+eVar60 - Visitor Login | Social Media
+event_n5 --> Capture post successful LinkedIn Sign Up
+
+Similarly follow the naming convention for Sign Ups, Success and events
+Twitter -  (Visitor Login | Twitter | Sign Up 
+Google+ -  (Visitor Login | Google+ | Sign Up 
+Instagram -  (Visitor Login | Instagram | Sign Up 
+
+and in the Digital tool, create a Calculated metric by summing up all the events (Total Successful Sign Ups)
